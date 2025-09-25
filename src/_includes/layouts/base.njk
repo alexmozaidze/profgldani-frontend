@@ -7,6 +7,9 @@
 		{% for cssUrl in styles %}
 		<link rel="stylesheet" href="{{ cssUrl }}">
 		{% endfor %}
+		{% for jsUrl in scripts %}
+		<script src="{{ jsUrl }}" defer></script>
+		{% endfor %}
 		<title>{{ title }}</title>
 	</head>
 	<body>

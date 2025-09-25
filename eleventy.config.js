@@ -1,12 +1,20 @@
-export default function (cfg) {
+export default function(cfg) {
 	cfg.setOutputDirectory("public");
 	cfg.setInputDirectory("src");
 
-	cfg.addPassthroughCopy("src/img");
-	cfg.addPassthroughCopy("src/styles");
+	[
+		"src/img",
+		"src/styles",
+		"src/videos",
+		"src/scripts"
+	].forEach((path) =>
+		cfg.addPassthroughCopy(path),
+	);
 
 	[
 		"src/styles/**",
 		"src/scripts/**",
-	].forEach(glob => cfg.addWatchTarget(glob));
-};
+	].forEach((glob) =>
+		cfg.addWatchTarget(glob),
+	);
+}
