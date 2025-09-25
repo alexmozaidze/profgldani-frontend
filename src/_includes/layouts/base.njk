@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default('ka', true) }}">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="shortcut icon" href="/img/favicon.gif">
+		{% for cssUrl in styles %}
+		<link rel="stylesheet" href="{{ cssUrl }}">
+		{% endfor %}
+		<title>{{ title }}</title>
+	</head>
+	<body>
+		{{ content | safe }}
+	</body>
+</html>

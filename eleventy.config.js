@@ -1,4 +1,12 @@
-export default function (eleventyConfig) {
-	eleventyConfig.addPassthroughCopy("img");
-	eleventyConfig.addPassthroughCopy("css/fonts");
+export default function (cfg) {
+	cfg.setOutputDirectory("public");
+	cfg.setInputDirectory("src");
+
+	cfg.addPassthroughCopy("src/img");
+	cfg.addPassthroughCopy("src/styles");
+
+	[
+		"src/styles/**",
+		"src/scripts/**",
+	].forEach(glob => cfg.addWatchTarget(glob));
 };
