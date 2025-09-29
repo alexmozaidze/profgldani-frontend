@@ -1,6 +1,6 @@
 <ul>
 	<li><a href="/">მთავარი გვერდი</a></li>
-	{% for assignment in collections.assignment %}
+	{% for assignment in collections.assignment | sort(false, false, "data.title") %}
 	<li><a href="{{ assignment.url }}">{{ assignment.data.title }}</a></li>
 	{% endfor %}
 </ul>
