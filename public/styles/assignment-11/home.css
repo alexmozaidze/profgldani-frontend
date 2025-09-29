@@ -1,0 +1,26 @@
+#assignment {
+	nav {
+		background-color: #abfb17;
+	}
+
+	h1,
+	p {
+		text-align: center;
+	}
+
+
+	h1 {
+		background-color: #000;
+		color: #fff;
+	}
+
+	main a[href="/about-us/"] {
+		background-color: #000;
+		color: #9d141c;
+	}
+
+	main a[href="/contact/"] {
+		background-color: #000;
+		color: #ff0;
+	}
+}
