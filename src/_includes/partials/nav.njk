@@ -1,5 +1,6 @@
 <ul>
-	<li><a href="/">Home</a></li>
-	<li><a href="/16-1/">16.1</a></li>
-	<li><a href="/16-2/">16.2</a></li>
+	<li><a href="/">მთავარი გვერდი</a></li>
+	{% for assignment in collections.assignment %}
+	<li><a href="{{ assignment.url }}">{{ assignment.data.title }}</a></li>
+	{% endfor %}
 </ul>

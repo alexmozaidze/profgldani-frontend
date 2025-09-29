@@ -5,7 +5,7 @@ export default function(cfg) {
 	[
 		"src/styles",
 		"src/scripts",
-		"src/assets",
+		"src/static",
 	].forEach((path) =>
 		cfg.addPassthroughCopy(path),
 	);

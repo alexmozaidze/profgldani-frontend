@@ -4,12 +4,7 @@ layout: layouts/base.njk
 
 <header>
 	<nav>
-		<ul>
-			<li><a href="/">მთავარი გვერდი</a></li>
-			{% for assignment in collections.assignment %}
-			<li><a href="{{ assignment.url }}">{{ assignment.data.title }}</a></li>
-			{% endfor %}
-		</ul>
+		{% include "partials/nav.njk" %}
 	</nav>
 </header>
 
