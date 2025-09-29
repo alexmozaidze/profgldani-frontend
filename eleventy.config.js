@@ -3,10 +3,9 @@ export default function(cfg) {
 	cfg.setInputDirectory("src");
 
 	[
-		"src/img",
 		"src/styles",
-		"src/videos",
-		"src/scripts"
+		"src/scripts",
+		"src/assets",
 	].forEach((path) =>
 		cfg.addPassthroughCopy(path),
 	);
