@@ -1,0 +1,45 @@
+#assignment {
+	--cyan: #5a80ab;
+
+	.header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	h1 {
+		color: var(--cyan);
+		margin: 0;
+	}
+
+	h2 {
+		font-size: 10pt;
+		text-align: center;
+	}
+
+	.formula {
+		color: #2f6b34;
+		font-size: 20pt;
+	}
+
+	figure {
+		text-align: center;
+		font-weight: bold;
+		font-size: 10pt;
+	}
+
+	q {
+		font-size: x-large;
+	}
+
+	.read-more {
+		font-size: large;
+		color: #62277e;
+
+		a {
+			color: var(--cyan);
+			text-decoration: none;
+		}
+	}
+}
