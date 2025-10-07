@@ -1,0 +1,96 @@
+---
+layout: layouts/assignment.njk
+tags: assignment
+styles:
+  - /styles/assignment-25.css
+title: დავალება 25
+---
+
+<main>
+	<h1>Application For Permission To Date My Daughter</h1>
+
+	<span><strong>Note:</strong> Form is to be completed at least 21 days prior to date</span>
+
+	<form method="post">
+		<fieldset>
+			<legend>Personal Details</legend>
+
+			<div>
+				<label for="name">Name: </label>
+				<input type="text" id="name" name="name">
+			</div>
+
+			<div>
+				<label for="address">Address: </label>
+				<input type="text" id="address" name="address">
+			</div>
+
+			<div>
+				<label for="email">Email: </label>
+				<input type="text" id="email" name="email">
+			</div>
+
+			<div>
+				<label for="phone-number">Phone Number: </label>
+				<input type="text" id="phone-number" name="phone-number">
+			</div>
+
+			<div>
+				<label for="iq">IQ: </label>
+				<input type="text" id="iq" name="iq">
+			</div>
+
+			<fieldset>
+				<legend>Gender</legend>
+
+				<label for="male">Male: </label>
+				<input type="radio" id="male" name="gender">
+
+				<label for="female">Female: </label>
+				<input type="radio" id="female" name="gender">
+			</fieldset>
+
+			<div>
+				<label for="date-of-proposed-outing">Date of Proposed Outing: </label>
+				<input type="date" id="date-of-proposed-outing">
+			</div>
+		</fieldset>
+		<fieldset>
+			<label for="political-persuation">Political Persuation: </label>
+			<select name="political-persuation" id="political-persuation">
+				<option value="left wing">Left Wing</option>
+				<option value="right wing">Right Wing</option>
+				<option value="hamborger">Hamborger</option>
+			</select>
+
+			<label for="education-level-completed">Education Level Completed: </label>
+			<select name="education-level-completed" id="education-level-completed">
+				<option value="university">University</option>
+				<option value="college">College</option>
+				<option value="high-school">High-school</option>
+				<option value="unga bunga">Unga Bunga</option>
+			</select>
+		</fieldset>
+		<fieldset class="essay-section">
+			<legend>Essay Section</legend>
+
+			<div>
+				<label for="dating-reasons">In 50 words or more explain why you want to date my daughter</label>
+				<textarea name="dating-reasons" id="dating-reasons" placeholder="Enter Text Here"></textarea>
+			</div>
+
+			<div>
+				<label for="contact-details">Please upload contact details for 2 references</label>
+				<textarea name="contact-details" id="contact-details" placeholder="Enter Text Here"></textarea>
+			</div>
+
+			<div>
+				<label for="scam">Upload Police Clearance Certificate, Bank Statement and Medical Certificates here: </label>
+				<label for="scam" class="angy-button">Attach Files</label>
+				<input type="file" name="scam" id="scam">
+			</div>
+		</fieldset>
+
+		<input type="submit" value="Send Your Application" class="angy-button">
+	</form>
+</main>

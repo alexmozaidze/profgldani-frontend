@@ -1,0 +1,45 @@
+#assignment {
+	background-color: #fafad2;
+	padding: 2rem;
+
+	main {
+		padding: 2rem;
+		background-color: white;
+		border-radius: 1rem;
+
+		&, fieldset {
+			border: #ededed solid 4px;
+		}
+		fieldset {
+			border-radius: .5rem;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+
+			input[type="submit"] {
+				align-self: center;
+			}
+
+			.angy-button {
+				background-color: red;
+				color: white;
+				padding: 4px;
+				border: none;
+				font-size: medium;
+			}
+
+			.essay-section {
+				>div:not(:last-child)>label {
+					display: block;
+				}
+
+				input#scam {
+					display: none;
+				}
+			}
+		}
+	}
+}
