@@ -1,6 +1,15 @@
 #assignment {
+	display: flex;
+	flex-direction: column;
+
 	header, footer {
 		background-color: lightgray;
+	}
+
+	header {
+		h1 {
+			margin: 0;
+		}
 	}
 
 	main {
@@ -21,21 +30,77 @@
 
 		form {
 			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-rows: 1fr;
+			grid-template:
+				"full-name-label full-name-input email-input email-label"
+				". purpose-label purpose-label ."
+				". purpose-input purpose-input ."
+				". message-label message-label ."
+				". message-input message-input ."
+				". submit submit ."
+				/ max-content 1fr 1fr max-content;
+			column-gap: .2rem;
+			row-gap: 1rem;
 
-			label[for="email-input"] {
-				/* grid-column: 4; */
-			}
-			input#email-input {
-				/* grid-column-start: 2; */
-				/* grid-column-end: 3; */
+			label {
+				text-align: center;
 			}
 
-			#purpose-input, [for="purpose-input"],
-			#message-input, [for="message-input"] {
-				grid-column: span 4;
+			[for="full-name-input"] {
+				grid-area: full-name-label;
+				padding-right: 2rem;
+			}
+			#full-name-input {
+				grid-area: full-name-input;
+			}
+
+			[for="email-input"] {
+				grid-area: email-label;
+				padding-left: 2rem;
+			}
+			#email-input {
+				grid-area: email-input;
+			}
+
+			[for="purpose-input"] {
+				grid-area: purpose-label;
+			}
+			#purpose-input {
+				grid-area: purpose-input;
+			}
+
+			[for="message-input"] {
+				grid-area: message-label;
+			}
+			#message-input {
+				grid-area: message-input;
+			}
+
+			#purpose-input,
+			#message-input,
+			input[type="submit"] {
+				width: 90%;
+				justify-self: center;
+			}
+
+			input[type="submit"] {
+				grid-area: submit;
+				background-color: #000;
+				color: #fff;
+				border: 2px groove #fff;
+				font-size: 1.2rem;
+				font-weight: bold;
+				padding: .5rem;
+				cursor: pointer;
+
+				&:active {
+					/* იმიტომ რომ შემიძლია :) */
+					filter: brightness(2.2);
+				}
 			}
 		}
+	}
+
+	footer {
+		text-align: center;
 	}
 }
