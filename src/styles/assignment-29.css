@@ -1,0 +1,41 @@
+#assignment {
+	header, footer {
+		background-color: lightgray;
+	}
+
+	main {
+		background-color: gray;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 2rem;
+
+		.content {
+			color: #fff;
+			text-align: center;
+		}
+
+		h2 {
+			font-size: 1.8rem;
+		}
+
+		form {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: 1fr;
+
+			label[for="email-input"] {
+				/* grid-column: 4; */
+			}
+			input#email-input {
+				/* grid-column-start: 2; */
+				/* grid-column-end: 3; */
+			}
+
+			#purpose-input, [for="purpose-input"],
+			#message-input, [for="message-input"] {
+				grid-column: span 4;
+			}
+		}
+	}
+}
