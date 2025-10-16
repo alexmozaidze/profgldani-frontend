@@ -1,0 +1,32 @@
+#assignment {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: minmax(40%, 50rem);
+	justify-content: center;
+	align-content: space-evenly;
+	gap: 2rem;
+
+	background-image: url("/static/images/parallax.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	article {
+		background-color: #fff;
+		padding: 4rem;
+
+		.title-wrapper {
+			border-bottom: 2px solid black;
+
+			.title,
+			.sub-title {
+				text-transform: uppercase;
+			}
+
+			.title {
+				color: #ff7600;
+			}
+		}
+	}
+}
