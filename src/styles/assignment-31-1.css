@@ -1,0 +1,123 @@
+#assignment {
+	--primary-color: #3b82f6;
+	--background-color: #f3f4f6;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--background-color);
+	font-family: Arial, Helvetica, sans-serif;
+
+	.card {
+		display: flex;
+		flex-direction: column;
+		background-color: #fff;
+		width: 25rem;
+		border-radius: 1rem;
+		overflow: hidden;
+		box-shadow: 0 0 5px #ccc;
+
+		p,
+		span {
+			font-weight: 100;
+		}
+
+		p,
+		span,
+		li {
+			font-size: 0.9rem;
+		}
+
+		p,
+		span,
+		li,
+		h2 {
+			color: #222;
+		}
+
+		h1 {
+			font-size: 1.5em;
+		}
+
+		h2 {
+			font-size: 1em;
+			font-weight: bold;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+		li {
+			line-height: 2;
+		}
+
+		>header {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: var(--primary-color);
+			padding: 2rem 0;
+
+			svg {
+				--size: 6rem;
+				width: var(--size);
+				height: var(--size);
+				color: #fff;
+			}
+		}
+
+		>main {
+			padding: 2rem;
+
+			ul {
+				--bullet-offset: 1rem;
+				--bullet-font-size: 0.8rem;
+
+				list-style-type: none;
+				padding-left: calc(var(--bullet-offset) + var(--bullet-font-size) / 2);
+
+				li {
+					position: relative;
+
+					&::before {
+						content: "\25CF";
+						font-size: var(--bullet-font-size);
+						position: absolute;
+						right: calc(100% + var(--bullet-offset));
+					}
+				}
+			}
+
+			.button {
+				display: block;
+				color: #fff;
+				background-color: var(--primary-color);
+				text-decoration: none;
+				font-weight: bold;
+				padding: 1rem;
+				text-align: center;
+				border-radius: 5rem;
+				user-select: none;
+
+				&:hover {
+					filter: brightness(1.1);
+				}
+				&:active {
+					filter: brightness(0.9)
+				}
+			}
+		}
+
+		>footer {
+			text-align: center;
+			background-color: #f9fafc;
+			border-top: 2px solid var(--background-color);
+
+			>p {
+				color: #444;
+				font-size: small;
+			}
+		}
+	}
+}
