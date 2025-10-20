@@ -3,68 +3,75 @@
 
 	font-family: Arial, Helvetica, sans-serif;
 
-	>header {
-		color: var(--primary-color);
-		background-image: url("/static/images/shore.jpg");
-		background-position: center;
-		background-size: cover;
-		height: 100vh;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-
-		>h1,
-		>p {
-			margin: 0;
-		}
-
-		>h1 {
-			font-size: 3rem;
-		}
-
-		.read-more {
-			background-color: transparent;
-			border: 1px solid var(--primary-color);
-			border-radius: 10px;
-			text-decoration: none;
-			padding: .5rem .7rem;
+	>main {
+		>.hero-card {
 			color: var(--primary-color);
-			margin-top: 1rem;
-			--transition-speed: 100ms;
-			transition:
-				background-color var(--transition-speed),
-				color var(--transition-speed);
+			background-image: url("/static/images/shore.jpg");
+			background-position: center;
+			background-size: cover;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 
-			&:hover {
-				color: #fff;
-				background-color: var(--primary-color);
+			>h1,
+			>p {
+				margin: 0;
+			}
+
+			>h1 {
+				font-size: 3rem;
+			}
+
+			.read-more {
+				background-color: transparent;
+				border: 1px solid var(--primary-color);
+				border-radius: 10px;
+				text-decoration: none;
+				padding: 0.5rem 0.7rem;
+				color: var(--primary-color);
+				margin-top: 1rem;
+				--transition-speed: 100ms;
+				transition:
+					background-color var(--transition-speed),
+					color var(--transition-speed);
+
+				&:hover {
+					color: #fff;
+					background-color: var(--primary-color);
+				}
+
+				&:active {
+					filter: brightness(0.8);
+				}
 			}
 		}
-	}
 
-	>main {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		article {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
 
-		>p {
-			margin: 0;
-			padding: 1rem;
-			line-height: 1.5;
-		}
+			>section {
+				>p {
+					margin: 0;
+					padding: 1rem;
+					line-height: 1.5;
+				}
 
-		:nth-child(1),
-		:nth-child(2) {
-			grid-column: span 3;
-			text-align: center;
-		}
+				&:nth-child(1),
+				&:nth-child(2) {
+					grid-column: span 3;
+					text-align: center;
+				}
 
-		:nth-child(1),
-		:nth-child(3),
-		:nth-child(5) {
-			background-color: var(--primary-color);
-			color: #fff;
+				&:nth-child(1),
+				&:nth-child(3),
+				&:nth-child(5) {
+					background-color: var(--primary-color);
+					color: #fff;
+				}
+			}
 		}
 	}
 }
