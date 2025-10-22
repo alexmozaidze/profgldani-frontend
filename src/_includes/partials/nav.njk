@@ -1,6 +1,11 @@
-<ul>
-	<li><a href="/">მთავარი გვერდი</a></li>
-	{% for assignment in collections.assignment | sort(false, false, "data.title") %}
-	<li><a href="{{ assignment.url }}">{{ assignment.data.title }}</a></li>
-	{% endfor %}
-</ul>
+<nav class="main-nav">
+	<a href="/">მთავარი გვერდი</a>
+	<div class="assignments">
+		<span>დავალებები:</span>
+		<ul>
+			{% for assignment in collections.assignment | sort(false, false, "data.title") %}
+			<li><a href="{{ assignment.url }}">{{ assignment.data['assignment-id'] }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</nav>
