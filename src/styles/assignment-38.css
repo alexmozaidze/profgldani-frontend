@@ -1,0 +1,41 @@
+#assignment {
+	--primary-color: #3c5a9a;
+	--font-color: #fff;
+
+	background-color: var(--primary-color);
+	color: var(--font-color);
+
+	>main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		height: 100%;
+
+		>i {
+			border: 1px solid var(--font-color);
+			border-radius: .1rem;
+			font-size: 2rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			--size: 125px;
+			width: var(--size);
+			height: var(--size);
+			border-radius: 8px;
+			transition:
+				color 200ms,
+				background-color 200ms;
+
+			&:hover {
+				color: var(--primary-color);
+				background-color: var(--font-color);
+				cursor: pointer;
+			}
+
+			&:active {
+				filter: brightness(0.7);
+			}
+		}
+	}
+}
