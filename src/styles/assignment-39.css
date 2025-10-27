@@ -1,0 +1,65 @@
+#assignment {
+	--gray: #e2e2e2;
+
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+	.asymmetric-text {
+		>span:nth-child(odd) {
+			font-weight: lighter;
+		}
+		>span:nth-child(even) {
+			font-weight: bold;
+		}
+	}
+
+	>header {
+		background-image:
+			linear-gradient(rgba(121, 83, 129, .8), rgba(52, 103, 178, .8) 40%),
+			url("/static/images/web-design-background.jpg");
+		background-position: bottom;
+		background-size: cover;
+		height: 400px;
+
+		>h1 {
+			color: #fff;
+			text-align: center;
+			padding-top: 2rem;
+			margin: 0;
+			font-size: 42pt;
+		}
+	}
+
+	>main {
+		>h2 {
+			text-align: center;
+		}
+
+		>.content {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			counter-reset: index;
+
+			>section {
+				&::before {
+					counter-increment: index;
+					content: counter(index, decimal-leading-zero) " ";
+					font-size: 32pt;
+					color: var(--gray);
+					font-weight: bold;
+				}
+
+				&:first-child {
+					text-align: right;
+					border-right: 2px dotted var(--gray);
+					--line-spacing: 1rem;
+					padding-right: var(--line-spacing);
+					margin-right: var(--line-spacing);
+				}
+
+				>p {
+					font-weight: lighter;
+				}
+			}
+		}
+	}
+}

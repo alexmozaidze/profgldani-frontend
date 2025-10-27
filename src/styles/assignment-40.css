@@ -1,0 +1,132 @@
+#assignment {
+	#page-wrapper {
+		--primary-color: #293f50;
+		--secondary-color: #62837d;
+		--text-color-on-primary: #fff;
+		--main-content-bg-color: #fff;
+		--text-color: #333;
+		--logo-top-border-color: #6e8b83;
+
+		display: grid;
+		grid-template-columns: 1fr minmax(auto, 800px) 1fr;
+		grid-template-rows: max-content;
+		justify-content: center;
+		font-family:
+			"Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+			"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+		overflow: hidden;
+		background-color: var(--primary-color);
+
+		>header,
+		>main,
+		>footer {
+			grid-column: 2;
+		}
+
+		.navigation {
+			display: flex;
+			justify-content: right;
+			gap: 1.5rem;
+
+			>ul {
+				list-style-type: none;
+
+				&,
+				>li {
+					display: contents;
+				}
+			}
+
+			a {
+				text-decoration: none;
+				color: var(--text-color-on-primary);
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		>header {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			color: var(--text-color-on-primary);
+
+			>h1,
+			nav {
+				text-transform: uppercase;
+			}
+
+			h2,
+			>.navigation-with-info>.info {
+				color: var(--secondary-color);
+			}
+
+			>h1 {
+				justify-self: left;
+				border-top: 1mm solid var(--logo-top-border-color);
+				margin: 0;
+				font-weight: lighter;
+				letter-spacing: 4px;
+			}
+
+			>.navigation-with-info {
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: end;
+				gap: 1rem;
+				text-align: right;
+			}
+
+			>section {
+				grid-column: span 2;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				padding: 4rem;
+
+				>.register {
+					text-decoration: none;
+					color: var(--text-color-on-primary);
+					background-color: transparent;
+					border: 1px solid var(--text-color-on-primary);
+					border-radius: 4px;
+					padding: .8rem 1.5rem;
+					transition-property: background-color, color;
+					transition-duration: 100ms;
+
+					&:hover {
+						background-color: var(--text-color-on-primary);
+						color: var(--primary-color);
+					}
+
+					&:active {
+						filter: brightness(0.7);
+					}
+				}
+			}
+		}
+
+		>main {
+			display: flex;
+			justify-content: space-evenly;
+			background-color: var(--text-color-on-primary);
+
+			>article {
+				>img {
+					width: 200px;
+					max-width: 100%;
+					object-fit: cover;
+					aspect-ratio: 1 / 1;
+				}
+			}
+		}
+
+		>footer {
+			display: flex;
+			justify-content: space-between;
+			padding: 2rem;
+		}
+	}
+}
